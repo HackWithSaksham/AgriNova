@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KisanConnect — Needy farmers</title>
+
+  <!-- Tailwind CDN (for quick prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="kisanConnect.css" />
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-green-800 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill="#ffffff22"/>
+            <path d="M7 12c2-4 6-4 8 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-bold text-xl">KisanConnect</span>
+        </div>
+
+        <div class="hidden md:flex items-center bg-white rounded-md px-3 py-1 text-black w-[520px]">
+          <svg class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input id="top-search" class="ml-3 w-full text-sm outline-none" placeholder="Search for categories" />
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <span class="text-sm hidden sm:inline">En</span>
+        <span class="text-sm hidden sm:inline">Returns & Orders</span>
+        <button class="text-sm">Cart</button>
+        <button class="bg-white text-green-800 rounded-full w-9 h-9 flex items-center justify-center">👤</button>
+      </div>
+    </div>
+  </header>
+
+ <!-- HERO -->
+<section class="max-w-6xl mx-auto px-6 mt-8">
+  <div class="relative bg-cover bg-center rounded-md overflow-hidden" 
+       style="background-image: url('https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1400&q=60')">
+    <div class="bg-black/45 px-8 py-16 flex flex-col items-center text-center">
+      <h2 class="text-white text-3xl md:text-4xl font-semibold">Support Farmers, Empower Lives</h2>
+      <p class="text-green-100 mt-3 hidden md:block">Help local farmers recover and improve agriculture infrastructure.</p>
+
+      <!-- FIXED: make it an anchor tag that links to donation page -->
+      <a href="kisanConnect_donate.html"
+         class="mt-6 bg-green-700 hover:bg-green-600 text-white px-6 py-2 rounded-md inline-block">
+        Donate now...
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTENT -->
+  <main class="max-w-6xl mx-auto px-6 mt-8 mb-12">
+    <h3 class="text-2xl font-semibold mb-4">Needy farmers</h3>
+
+    <div class="bg-white border rounded-lg p-6 shadow-sm">
+      <!-- Search (mobile) -->
+      <div class="md:hidden mb-4">
+        <input id="mobile-search" class="w-full border rounded px-3 py-2 text-sm" placeholder="Search farmers or crops..." />
+      </div>
+
+      <!-- Farmers list -->
+      <div id="farmers-list" class="space-y-6">
+        <!-- single farmer card (will be duplicated by JS) -->
+        <!-- We'll include a few by default in HTML to match screenshot -->
+      </div>
+
+      <div class="mt-6 flex justify-end">
+        <button id="view-all" class="bg-green-700 hover:bg-green-600 text-white px-5 py-2 rounded-md">View all farmers</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- In kisanConnect.html -->
+<a href="kisanConnect_donate.html" 
+   class="mt-6 bg-green-700 hover:bg-green-600 text-white px-6 py-2 rounded-md inline-block">
+  Donate now...
+</a>
+
+<button id="donate-btn" 
+        class="mt-6 bg-green-700 hover:bg-green-600 text-white px-6 py-2 rounded-md">
+  Donate now...
+</button>
+
+
+
+  <script src="kisanConnect.js"></script>
+</body>
+</html>

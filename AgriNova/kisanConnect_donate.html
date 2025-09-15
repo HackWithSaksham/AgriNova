@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KisanConnect - Donate</title>
+  <link rel="stylesheet" href="kisanConnect.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">KisanConnect</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for categories">
+    </div>
+    <div class="header-right">
+      <span>En</span>
+      <a href="#">Returns & Orders</a>
+      <a href="#">Cart</a>
+      <a href="#">👤</a>
+    </div>
+  </header>
+
+  <!-- Donation Section -->
+  <main class="donation-container">
+    <h2>Donation Options</h2>
+    <div class="donation-options">
+      <button class="donation-btn" data-amount="100">₹100</button>
+      <button class="donation-btn" data-amount="200">₹200</button>
+      <button class="donation-btn" data-amount="500">₹500</button>
+      <button class="donation-btn" data-amount="1000">₹1000</button>
+      <input type="number" id="customAmount" placeholder="₹ Custom amount">
+    </div>
+
+    <h2>Payment Method</h2>
+    <div class="payment-methods">
+      <label>
+        <input type="radio" name="payment" value="card"> Credit or Debit Card
+      </label>
+      <div id="cardDetails" class="hidden">
+        <input type="text" placeholder="Card Number (XXXX-XXXX-XXXX-XXXX)">
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Expiry date (MM/YY)">
+        <button class="add-card">+ Add a new credit or debit card</button>
+      </div>
+
+      <label>
+        <input type="radio" name="payment" value="upi"> UPI Apps
+      </label>
+      <div id="upiDetails" class="hidden">
+        <input type="text" id="upiId" placeholder="Enter your UPI ID">
+        <button id="verifyUPI">Verify</button>
+      </div>
+    </div>
+
+    <!-- Payment Info -->
+    <div class="payment-info">
+      <p><strong>Paying to:</strong> Ajay Parmar</p>
+      <p><strong>For:</strong> Support Irrigation System</p>
+    </div>
+
+    <button id="confirmPayment">Use this payment method</button>
+  </main>
+
+  <script src="kisanConnect.js"></script>
+</body>
+</html>

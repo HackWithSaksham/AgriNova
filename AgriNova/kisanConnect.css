@@ -1,0 +1,250 @@
+/* Small custom tweaks on top of Tailwind */
+
+/* Card avatar style for circular illustrated avatar */
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #4f46e5 0%, #7c3aed 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+/* Subtle divider similar to screenshot */
+.farmer-divider {
+  height: 1px;
+  background: #E6E6E6;
+  margin: 18px 0;
+}
+
+/* Ensure long storyline wraps nicely */
+.storyline {
+  white-space: pre-wrap;
+}
+
+/* Small responsive container width adjustment for large hero text spacing */
+@media (min-width: 1024px) {
+  header .max-w-6xl { max-width: 900px; }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+}
+
+/* Header */
+.header {
+  background: #2e5f31;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+}
+
+.header-right a, .header-right span {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Donation container */
+.donation-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.donation-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.donation-btn {
+  padding: 10px 20px;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.donation-btn.active {
+  background: #2e5f31;
+  color: white;
+}
+
+#customAmount {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Payment methods */
+.payment-methods {
+  margin: 20px 0;
+}
+
+.payment-methods label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.payment-methods input[type="text"] {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+.add-card, #verifyUPI, #confirmPayment {
+  background: #2e5f31;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.payment-info {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+/*KISANCONNECT_HOME*/
+
+/* Hero section */
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Categories */
+.categories .category-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+.categories img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Products */
+.products .product-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.product-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+.product-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Quick Stats */
+.quick-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.stat {
+  background: #2e5f31;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Recent Orders */
+.recent-orders table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.recent-orders th, .recent-orders td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.recent-orders th {
+  background: #2e5f31;
+  color: white;
+}
+
+/* AI Trends */
+.ai-trends {
+  text-align: center;
+  margin: 20px 0;
+}
+.ai-trends img {
+  width: 300px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #2e5f31;
+  color: white;
+  padding: 20px;
+}
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer h4 {
+  margin-bottom: 10px;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
