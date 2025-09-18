@@ -6,6 +6,8 @@ import connectDB from "./server/config/mongodb.js";
 import farmerrouter from "./server/routes/FarmerRoutes.js";
 import userrouter from "./server/routes/UserRoutes.js";
 
+import knowledgeRoutes from "./server/routes/knowledgeRoutes.js";
+
 const app = express();
 const port = process.env.PORT || 4000;
 connectDB();
@@ -13,7 +15,11 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({credentials:true}))
 
+<<<<<<< HEAD
 app.use('/api/farmer',farmerrouter);
 app.use('/api/user',userrouter);
+=======
+app.use("/api/knowledge", knowledgeRoutes);
+>>>>>>> 1c61de719443258040e72de6976b1e1430988a33
 
 app.listen(port,()=>console.log("Server Started"));
