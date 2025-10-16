@@ -15,11 +15,8 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({credentials:true}))
 
-<<<<<<< HEAD
 app.use('/api/farmer',farmerrouter);
 app.use('/api/user',userrouter);
-=======
 app.use("/api/knowledge", knowledgeRoutes);
->>>>>>> 1c61de719443258040e72de6976b1e1430988a33
 
 app.listen(port,()=>console.log("Server Started"));
